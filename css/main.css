@@ -1,0 +1,647 @@
+@font-face {
+    font-family: 'UniversLTStd-Bold';
+    src: url('../fonts/UniversLTStdBold.eot');
+    src: url('../fonts/UniversLTStdBold.eot') format('embedded-opentype'),
+    url('../fonts/UniversLTStdBold.woff2') format('woff2'),
+    url('../fonts/UniversLTStdBold.woff') format('woff'),
+    url('../fonts/UniversLTStdBold.ttf') format('truetype'),
+    url('../fonts/UniversLTStdBold.svg#UniversLTStdBold') format('svg');
+}
+
+@font-face {
+    font-family: 'UniversLTStd-BoldCn';
+    src: url('../fonts/UniversLTStdBoldCn.eot');
+    src: url('../fonts/UniversLTStdBoldCn.eot') format('embedded-opentype'),
+    url('../fonts/UniversLTStdBoldCn.woff2') format('woff2'),
+    url('../fonts/UniversLTStdBoldCn.woff') format('woff'),
+    url('../fonts/UniversLTStdBoldCn.ttf') format('truetype'),
+    url('../fonts/UniversLTStdBoldCn.svg#UniversLTStdBoldCn') format('svg');
+}
+
+@font-face {
+    font-family: 'UniversLTStd-LightCn';
+    src: url('../fonts/UniversLTStdLightCn.eot');
+    src: url('../fonts/UniversLTStdLightCn.eot') format('embedded-opentype'),
+    url('../fonts/UniversLTStdLightCn.woff2') format('woff2'),
+    url('../fonts/UniversLTStdLightCn.woff') format('woff'),
+    url('../fonts/UniversLTStdLightCn.ttf') format('truetype'),
+    url('../fonts/UniversLTStdLightCn.svg#UniversLTStdLightCn') format('svg');
+}
+@font-face {
+    font-family: 'dinengsbekregular';
+    src: url('../fonts/dinengalt-webfont.eot');
+    src: url('../fonts/dinengalt-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/dinengalt-webfont.woff2') format('woff2'),
+    url('../fonts/dinengalt-webfont.woff') format('woff'),
+    url('../fonts/dinengalt-webfont.ttf') format('truetype'),
+    url('../fonts/dinengalt-webfont.svg#dinengsbekregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#ieError {
+    background: #cbd0d4 url("../images/Vetera_ErrorScreen.jpg") 50% 50% no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+svg {
+    /*border: 1px solid red;*/
+    padding: 0;
+    margin: 0;
+}
+
+.page {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    opacity: 0;
+    width: 100%;
+}
+
+.inset {
+    position: absolute;
+    background-color: #58585a;
+    color: white;
+    line-height: 5vh;
+    font-size: 4vh;
+    letter-spacing: 1px;
+}
+
+.footnote {
+    cursor: pointer;
+}
+
+.downButton {
+    /*border: 1px solid green;*/
+    position: absolute;
+    bottom: 3%;
+    right: 2%;
+    width: 5%;
+    height: 15%;
+    /*cursor: pointer;*/
+}
+
+.downButton svg {
+    width: 100%;
+    height: 100%;
+}
+
+.downButtonCircle {
+    transition: all 0.3s ease;
+    fill: #A7A9AC;
+}
+
+.upButton {
+    position: absolute;
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+    bottom: 3%;
+    right: 2%;
+    width: 5%;
+    height: 15%;
+    cursor: pointer;
+}
+
+sup {
+    font-size: 0.5em;
+    vertical-align: super;
+}
+
+.shadow {
+    -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.italic {
+    font-style: italic;
+}
+
+body {
+    font-family: 'UniversLTStd-Bold';
+}
+
+#symbolDefs {
+    display: none;
+}
+
+#pageWrapper {
+    position: absolute;
+    width: 100%;
+    /*max-width: 940px;*/
+    margin: 0 auto;
+    /*background: url("../images/AntigenicDrift_Story_c5-crop.png") 0 0 no-repeat;*/
+    height: 2000px;
+    overflow: hidden;
+}
+
+/*HEADER*/
+
+#header {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    height: 160px;
+    background-color: white;
+    opacity: 1;
+
+}
+
+#header > .inset {
+    margin-top: 65px;
+    text-transform: uppercase;
+    text-indent: 110px;
+    text-align: right;
+    color: white;
+    background-color: black;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    font-size: 1.22em;
+    width: 70%;
+    /*border: 1px solid red;*/
+}
+
+.logo {
+    position: absolute;
+    top: 43px;
+    right: 5%;
+    z-index: 100;
+}
+
+/*PAGE 1*/
+
+#page_1 {
+    top: 0px;
+    height: 480px;
+    background-color: rgba(139, 141, 144, 0.5);
+    background-color: #c8c8c9;
+    opacity: 1;
+}
+
+#page_1 > .inset {
+    top: 243px;
+    left: 65%;
+    width: 28%;
+    padding: 17px;
+    padding-right: 55px;
+}
+
+#svg_page_1 {
+    width: 95%;
+    /*border: 1px solid red;*/
+    margin-top: 200px;
+    margin-left: 40px;
+}
+
+/*PAGE 2*/
+
+#page_2 {
+    height: 420px;
+    background-color: white;
+}
+
+#page_2 > .inset {
+    top: 0px;
+    left: 0px;
+    width: 460px;
+    padding-top: 35px;
+    padding-left: 65px;
+    padding-bottom: 28px;
+    /*background-color: transparent;*/
+    letter-spacing: 0.45px;
+}
+
+#svg_page_2 {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bgAntibody1 {
+    opacity: 0.65;
+}
+
+.bgAntibody2 {
+    opacity: 0.55;
+}
+
+.bgAntibody3 {
+    opacity: 0.75;
+}
+
+.bgAntibody4 {
+    opacity: 0.85;
+}
+
+.bgAntibody5 {
+    opacity: 0.55;
+}
+
+.bgAntibody6 {
+    opacity: 0.7;
+}
+
+.bgAntibody7 {
+    opacity: 0.4;
+}
+
+.bgAntibody8 {
+    opacity: 0.7;
+}
+
+.bgAntibody9 {
+    opacity: 0.55;
+}
+
+.bgAntibody10 {
+    opacity: 0.55;
+}
+
+.bgAntibody11 {
+    opacity: 0.7;
+}
+
+.bgAntibody12 {
+    opacity: 0.55;
+}
+
+.bgAntibody13 {
+    opacity: 0.55;
+}
+
+/*PAGE 3*/
+
+#page_3 {
+    height: 440px;
+    background-color: #ebeced;
+}
+
+#svg_page_3 {
+    position: absolute;
+    top: 42%;
+    left: 14.6%;
+    /*margin-top: 140px;*/
+    width: 76.5%;
+    height: 50%;
+}
+
+#svg_page_3_copy {
+    position: absolute;
+    top: 15%;
+    left: 19.5%;
+    /*margin-top: 140px;*/
+    width: 62%;
+    height: 50%;
+
+}
+
+#panel3LeftSideButton, #panel3RightSideButton {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+#page_3 > .inset {
+    top: 30px;
+    left: 50px;
+    width: 515px;
+    padding-top: 30px;
+    padding-left: 24px;
+    padding-bottom: 28px;
+    /*background-color: transparent;*/
+    /*border: 1px solid red;*/
+
+    letter-spacing: 0.45px;
+}
+
+/*PAGE 4*/
+
+#page_4 {
+    height: 410px;
+    background-color: white;
+}
+
+#svg_page_4 {
+    position: absolute;
+    top: 10%;
+    left: 4.5%;
+    /*width: 17.5%;*/
+    height: 75%;
+}
+
+#svg_page_4_copy {
+    position: absolute;
+    top: 0;
+    left: 28%;
+    width: 74%;
+    height: 100%;
+}
+
+#panel4TopButton, #panel4MiddleButton, #panel4BottomButton {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+#page_4_DefaultCallout > .inset:nth-child(1) {
+    top: 0px;
+    /*left: 300px;*/
+    /*width: 465px;*/
+    padding-top: 40px;
+    padding-right: 30px;
+    padding-left: 24px;
+    padding-bottom: 60px;
+    letter-spacing: 0.45px;
+}
+
+#page_4_DefaultCallout > .inset:nth-child(2) {
+    top: 190px;
+    /*left: 300px;*/
+    width: 445px;
+    padding-top: 13px;
+    padding-left: 24px;
+    padding-bottom: 6px;
+    background-color: #e99619;
+    color: black;
+    letter-spacing: 0.45px;
+}
+
+#page_4_DefaultCallout > .inset:nth-child(3) {
+    top: 234px;
+    /*left: 300px;*/
+    /*width: 495px;*/
+    padding-top: 30px;
+    padding-left: 24px;
+    padding-bottom: 80px;
+    letter-spacing: 0.45px;
+}
+
+/*PAGE 5*/
+
+#page_5 {
+    height: 430px;
+    background-color: #ebeced;
+}
+
+#page_5_copy {
+    width: 80%;
+
+}
+
+#svg_page_5 {
+    position: absolute;
+    top: 17%;
+    left: -15%;
+    width: 130%;
+}
+
+#page_5 > .inset {
+    top: 0px;
+    left: 0px;
+    width: 457px;
+    padding-top: 28px;
+    padding-left: 63px;
+    padding-right: 35px;
+    padding-bottom: 16px;
+    /*background-color: transparent;*/
+    /*border: 1px solid red;*/
+
+    letter-spacing: 0.45px;
+}
+
+/*PAGE 6*/
+
+#page_6 {
+    height: 450px;
+    background-color: #ebeced;
+}
+
+.panel6Word {
+    transform-origin: 50% 50%;
+    fill: #FFFFFF;
+    font-family: "dinengsbekregular";
+    font-size: 11px;
+}
+
+.panel6WordRed {
+    transform-origin: 50% 50%;
+    fill: red;
+    font-family: "dinengsbekregular";
+    font-size: 11px;
+}
+
+#svg_page_6_copy {
+    width: 90%;
+
+}
+
+#svg_page_6 {
+    position: absolute;
+    top: 40%;
+    left: 40px;
+    width: 79.5%;
+    margin-left: 4%;
+}
+
+#panel6LeftButton, #panel6RightButton {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+/*PAGE 7*/
+
+#page_7 {
+    height: 380px;
+    background-color: white;
+}
+
+#page7_copy {
+    position: absolute;
+    top: 2%;
+    left: 35px;
+    width: 90%;
+}
+
+#svg_page_7 {
+    position: absolute;
+    top: 53%;
+    left: 10%;
+    width: 92%;
+}
+
+/*PAGE 8*/
+
+#page_8 {
+    height: 110px;
+    background-color: #ebeced;
+    opacity: 1;
+}
+
+#page_8 > .inset {
+    top: 0px;
+    left: 0px;
+    width: 575px;
+    padding-top: 10px;
+    padding-left: 49px;
+    padding-right: 0px;
+    padding-bottom: 14px;
+    background-color: transparent;
+    color: black;
+    /*border: 1px solid red;*/
+    font-family: "Helvetica Neue Light", "Lucida Grande", "Calibri", "Arial", sans-serif;
+    font-size: 0.5em;
+    letter-spacing: 0.22px;
+    line-height: 1.5em;
+}
+
+#alerts {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* May want to do this if there is risk the container may be narrower than the element inside */
+    white-space: nowrap;
+    background-color: white;
+    pointer-events: none;
+}
+
+#rotateAlert {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#rotateAlert img {
+    display: table;
+    margin: 0 auto;
+    width: 85%;
+}
+
+/* portrait */
+@media screen and (orientation: portrait) {
+    #alerts {
+        display: table;
+    }
+}
+
+/* landscape */
+@media screen and (orientation: landscape) {
+    #alerts {
+        display: none;
+    }
+}
+
+@media (max-width: 760px) {
+    #header {
+        height: 28%;
+        max-height: 65px;
+    }
+
+    #header > .inset {
+        margin-top: 2.3%;
+        text-transform: uppercase;
+        text-indent: 0;
+        text-align: right;
+        color: white;
+        background-color: black;
+        /* padding-top: 4%; */
+        /* padding-bottom: 1%; */
+        padding-right: 10px;
+        font-size: 1em;
+        width: 78%;
+        line-height: 1em;
+        /* border: 1px solid red; */
+    }
+
+    .logo {
+        position: absolute;
+        top: 0;
+        right: 0%;
+        z-index: 100;
+        width: 15%;
+        margin-top: 1%;
+        margin-right: 2%;
+    }
+
+    #svg_page_1 {
+        margin-top: 12%;
+        margin-left: 22px;
+
+    }
+
+    #page7_copy {
+        top: 7%;
+    }
+
+    #page_8 > .inset {
+        width: 85%;
+        padding-top: 10px;
+        padding-top: 3%;
+        padding-left: 8%;
+    }
+
+}
+
+@media only screen and (min-device-width: 768px) {
+    #header {
+        height: 15%;
+    }
+
+    #header > .inset {
+        margin-top: 2.8%;
+        text-transform: uppercase;
+        text-indent: 0;
+        text-align: right;
+        color: white;
+        background-color: black;
+        /* padding-top: 4%; */
+        /* padding-bottom: 1%; */
+        padding-right: 10px;
+        font-size: 1em;
+        width: 78%;
+        line-height: 1em;
+        /* border: 1px solid red; */
+    }
+
+
+    .logo {
+        position: absolute;
+        top: 0;
+        right: 0%;
+        z-index: 100;
+        width: 12%;
+        margin-top: 1%;
+        margin-right: 4.2%;
+    }
+}
+
+
